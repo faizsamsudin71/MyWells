@@ -9,3 +9,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Data
+data/update_wpd_20260515.xlsx

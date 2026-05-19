@@ -1,5 +1,7 @@
 import pandas as pd
+# pyrefly: ignore [missing-import]
 import pytest
+# pyrefly: ignore [missing-import]
 from src.pipeline import get_rows_to_update
 
 def test_get_rows_to_update_filters_correctly():
