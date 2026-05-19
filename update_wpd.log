@@ -1,0 +1,224 @@
+2026-05-18 09:01:34 - INFO - Database connection established
+2026-05-18 09:01:34 - INFO - Fetching 2 wells from database
+2026-05-18 09:01:34 - WARNING - 1 well(s) not found in DB: {'WELL_NAME_2'}
+2026-05-18 09:01:34 - INFO - Test result: None
+2026-05-18 09:07:06 - INFO - Starting update_well_data test
+2026-05-18 09:07:07 - INFO - Loaded 995 rows from Excel
+2026-05-18 09:07:07 - INFO - Filtered to 5 rows to update
+2026-05-18 09:07:07 - INFO - Database connection established
+2026-05-18 09:07:07 - ERROR - Validation Error: 2 validation errors for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+DrillingMinStandard
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 09:07:07 - INFO - Test completed
+2026-05-18 09:08:48 - INFO - Starting update_well_data test
+2026-05-18 09:08:49 - INFO - Loaded 995 rows from Excel
+2026-05-18 09:08:49 - INFO - Columns: ['NOOP Document Date', 'FWR Document Date', 'PAC Name', 'Region Name', 'Field Name', 'Well Name', 'Well Type', 'Rig Name', 'Rig Type', 'Water Depth (m)', 'Total Well Depth MD Plan (m)', 'Total Well Depth TVD Plan (m)', 'AFE Cost Dry (usd)', 'AFE Cost Success (usd)', 'AFE Days Dry', 'AFE Days Success', 'AFE Cost (usd)', 'AFE Days', 'Special Status', 'Alternative Well Name', 'Tree Type', 'Spud Date', 'Well Start Date Time', 'Well End Date Time', 'Meterage Drilled (m)', 'Water Depth Category', 'Total Well Depth MD Actual (m)', 'Total Well Depth TVD Actual (m)', 'Final Cost Dry (usd)', 'Final Cost Success (usd)', 'Final Days Dry', 'Final Days Success', 'Final Cost (usd)', 'Final Days', 'Well NPT Percentage WOW (%)', 'Well NPT Percentage (%)', 'Drilling Min Standard', 'DMS', 'Plan DDPTF (days/1000ft)', 'Plan DDPTF', 'Plan DCPF (usd/ft)', 'Plan DCPF', 'Plan WCPF (usd/ft)', 'Plan WCPF', 'Actual DDPTF (days/1000ft)', 'Actual DDPTF', 'Actual DCPF (usd/ft)', 'Actual DCPF', 'Actual WCPF (usd/ft)', 'Actual WCPF', 'Completion Days Plan', 'Completion Cost Plan', 'Completion Min Standard', 'Plan CDPTF (days/1000ft)', 'Plan CCPF (usd/ft)', 'Completion Days Actual', 'Completion Cost Actual', 'Actual CDPTF (days/1000ft)', 'Actual CCPF (usd/ft)', 'Producing Formation', 'Pressure Temperature', 'Completion Type', 'Smart Well', 'ESP', 'Tubing Size (inch)', 'Zones', 'Number Of String', 'Tubing Material', 'Sand Control Length (ft)', 'PDG', 'OH Inflow Control', 'Completion Material', 'Completion Fluid Weight (ppg)', 'Completion Fluid Type', 'Chemical Injection Valve', 'Intelligent Gas Lift', 'Availability']
+2026-05-18 09:08:49 - INFO - First row: {'NOOP Document Date': Timestamp('2023-03-07 00:00:00'), 'FWR Document Date': Timestamp('2023-11-02 00:00:00'), 'PAC Name': 'VESTIGO', 'Region Name': 'PM', 'Field Name': 'LARUT', 'Well Name': 'LARUT A-26ST2', 'Well Type': 'APPRAISAL CUM DEV/DEVELOPMENT', 'Rig Name': 'SAPURA BERANI', 'Rig Type': 'TENDER ASSISTED DRILLING RIG (TADR)', 'Water Depth (m)': 60.0, 'Total Well Depth MD Plan (m)': 4127.49, 'Total Well Depth TVD Plan (m)': 2338.05, 'AFE Cost Dry (usd)': nan, 'AFE Cost Success (usd)': nan, 'AFE Days Dry': nan, 'AFE Days Success': nan, 'AFE Cost (usd)': 6560000.0, 'AFE Days': 14.29, 'Special Status': 'NO', 'Alternative Well Name': nan, 'Tree Type': 'DRY TREE', 'Spud Date': Timestamp('2023-08-25 00:00:00'), 'Well Start Date Time': Timestamp('2023-08-24 19:00:00'), 'Well End Date Time': Timestamp('2023-09-07 05:00:00'), 'Meterage Drilled (m)': 4026.63, 'Water Depth Category': 'SHALLOW WATER', 'Total Well Depth MD Actual (m)': 4121.5, 'Total Well Depth TVD Actual (m)': 2333.55, 'Final Cost Dry (usd)': nan, 'Final Cost Success (usd)': nan, 'Final Days Dry': nan, 'Final Days Success': nan, 'Final Cost (usd)': 4668369.0, 'Final Days': 13.42, 'Well NPT Percentage WOW (%)': 8.01, 'Well NPT Percentage (%)': 8.01, 'Drilling Min Standard': 'SW DEV ST 2HS MONOBORE', 'DMS': 'SW DEV ST 2HS', 'Plan DDPTF (days/1000ft)': 'Yes', 'Plan DDPTF': 2.4, 'Plan DCPF (usd/ft)': 'Yes', 'Plan DCPF': 795.0, 'Plan WCPF (usd/ft)': 'Yes', 'Plan WCPF': 1200.0, 'Actual DDPTF (days/1000ft)': 'yes', 'Actual DDPTF': 1.3, 'Actual DCPF (usd/ft)': 'yes', 'Actual DCPF': 325.0, 'Actual WCPF (usd/ft)': 'yes', 'Actual WCPF': 454.0, 'Completion Days Plan': nan, 'Completion Cost Plan': nan, 'Completion Min Standard': nan, 'Plan CDPTF (days/1000ft)': nan, 'Plan CCPF (usd/ft)': nan, 'Completion Days Actual': 1.81, 'Completion Cost Actual': 1318987.36, 'Actual CDPTF (days/1000ft)': nan, 'Actual CCPF (usd/ft)': nan, 'Producing Formation': 'SANDSTONE', 'Pressure Temperature': 'NORMAL', 'Completion Type': 'CASED HOLE CEMENTED MONOBORE', 'Smart Well': 'NO', 'ESP': 'NO', 'Tubing Size (inch)': '3-1/2"', 'Zones': 1.0, 'Number Of String': 'SINGLE', 'Tubing Material': 'L80 13CR', 'Sand Control Length (ft)': 65.62, 'PDG': False, 'OH Inflow Control': nan, 'Completion Material': 'L80 13CR', 'Completion Fluid Weight (ppg)': 6.8, 'Completion Fluid Type': 'BASE OIL/DIESEL', 'Chemical Injection Valve': 'NO', 'Intelligent Gas Lift': 'NO', 'Availability': 'Exist'}
+2026-05-18 09:08:49 - INFO - Filtered to 5 rows to update
+2026-05-18 09:08:49 - INFO - Database connection established
+2026-05-18 09:08:49 - ERROR - Validation Error: 2 validation errors for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+DrillingMinStandard
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 09:08:49 - INFO - Test completed
+2026-05-18 10:22:37 - INFO - Starting update_well_data test
+2026-05-18 10:22:38 - INFO - Loaded 995 rows from Excel
+2026-05-18 10:22:38 - INFO - Columns: ['NOOP Document Date', 'FWR Document Date', 'PAC Name', 'Region Name', 'Field Name', 'Well Name', 'Well Type', 'Rig Name', 'Rig Type', 'Water Depth (m)', 'Total Well Depth MD Plan (m)', 'Total Well Depth TVD Plan (m)', 'AFE Cost Dry (usd)', 'AFE Cost Success (usd)', 'AFE Days Dry', 'AFE Days Success', 'AFE Cost (usd)', 'AFE Days', 'Special Status', 'Alternative Well Name', 'Tree Type', 'Spud Date', 'Well Start Date Time', 'Well End Date Time', 'Meterage Drilled (m)', 'Water Depth Category', 'Total Well Depth MD Actual (m)', 'Total Well Depth TVD Actual (m)', 'Final Cost Dry (usd)', 'Final Cost Success (usd)', 'Final Days Dry', 'Final Days Success', 'Final Cost (usd)', 'Final Days', 'Well NPT Percentage WOW (%)', 'Well NPT Percentage (%)', 'Drilling Min Standard', 'DMS', 'Plan DDPTF (days/1000ft)', 'Plan DDPTF', 'Plan DCPF (usd/ft)', 'Plan DCPF', 'Plan WCPF (usd/ft)', 'Plan WCPF', 'Actual DDPTF (days/1000ft)', 'Actual DDPTF', 'Actual DCPF (usd/ft)', 'Actual DCPF', 'Actual WCPF (usd/ft)', 'Actual WCPF', 'Completion Days Plan', 'Completion Cost Plan', 'Completion Min Standard', 'Plan CDPTF (days/1000ft)', 'Plan CCPF (usd/ft)', 'Completion Days Actual', 'Completion Cost Actual', 'Actual CDPTF (days/1000ft)', 'Actual CCPF (usd/ft)', 'Producing Formation', 'Pressure Temperature', 'Completion Type', 'Smart Well', 'ESP', 'Tubing Size (inch)', 'Zones', 'Number Of String', 'Tubing Material', 'Sand Control Length (ft)', 'PDG', 'OH Inflow Control', 'Completion Material', 'Completion Fluid Weight (ppg)', 'Completion Fluid Type', 'Chemical Injection Valve', 'Intelligent Gas Lift', 'Availability']
+2026-05-18 10:22:38 - INFO - First row: {'NOOP Document Date': Timestamp('2023-03-07 00:00:00'), 'FWR Document Date': Timestamp('2023-11-02 00:00:00'), 'PAC Name': 'VESTIGO', 'Region Name': 'PM', 'Field Name': 'LARUT', 'Well Name': 'LARUT A-26ST2', 'Well Type': 'APPRAISAL CUM DEV/DEVELOPMENT', 'Rig Name': 'SAPURA BERANI', 'Rig Type': 'TENDER ASSISTED DRILLING RIG (TADR)', 'Water Depth (m)': 60.0, 'Total Well Depth MD Plan (m)': 4127.49, 'Total Well Depth TVD Plan (m)': 2338.05, 'AFE Cost Dry (usd)': nan, 'AFE Cost Success (usd)': nan, 'AFE Days Dry': nan, 'AFE Days Success': nan, 'AFE Cost (usd)': 6560000.0, 'AFE Days': 14.29, 'Special Status': 'NO', 'Alternative Well Name': nan, 'Tree Type': 'DRY TREE', 'Spud Date': Timestamp('2023-08-25 00:00:00'), 'Well Start Date Time': Timestamp('2023-08-24 19:00:00'), 'Well End Date Time': Timestamp('2023-09-07 05:00:00'), 'Meterage Drilled (m)': 4026.63, 'Water Depth Category': 'SHALLOW WATER', 'Total Well Depth MD Actual (m)': 4121.5, 'Total Well Depth TVD Actual (m)': 2333.55, 'Final Cost Dry (usd)': nan, 'Final Cost Success (usd)': nan, 'Final Days Dry': nan, 'Final Days Success': nan, 'Final Cost (usd)': 4668369.0, 'Final Days': 13.42, 'Well NPT Percentage WOW (%)': 8.01, 'Well NPT Percentage (%)': 8.01, 'Drilling Min Standard': 'SW DEV ST 2HS MONOBORE', 'DMS': 'SW DEV ST 2HS', 'Plan DDPTF (days/1000ft)': 'Yes', 'Plan DDPTF': 2.4, 'Plan DCPF (usd/ft)': 'Yes', 'Plan DCPF': 795.0, 'Plan WCPF (usd/ft)': 'Yes', 'Plan WCPF': 1200.0, 'Actual DDPTF (days/1000ft)': 'yes', 'Actual DDPTF': 1.3, 'Actual DCPF (usd/ft)': 'yes', 'Actual DCPF': 325.0, 'Actual WCPF (usd/ft)': 'yes', 'Actual WCPF': 454.0, 'Completion Days Plan': nan, 'Completion Cost Plan': nan, 'Completion Min Standard': nan, 'Plan CDPTF (days/1000ft)': nan, 'Plan CCPF (usd/ft)': nan, 'Completion Days Actual': 1.81, 'Completion Cost Actual': 1318987.36, 'Actual CDPTF (days/1000ft)': nan, 'Actual CCPF (usd/ft)': nan, 'Producing Formation': 'SANDSTONE', 'Pressure Temperature': 'NORMAL', 'Completion Type': 'CASED HOLE CEMENTED MONOBORE', 'Smart Well': 'NO', 'ESP': 'NO', 'Tubing Size (inch)': '3-1/2"', 'Zones': 1.0, 'Number Of String': 'SINGLE', 'Tubing Material': 'L80 13CR', 'Sand Control Length (ft)': 65.62, 'PDG': False, 'OH Inflow Control': nan, 'Completion Material': 'L80 13CR', 'Completion Fluid Weight (ppg)': 6.8, 'Completion Fluid Type': 'BASE OIL/DIESEL', 'Chemical Injection Valve': 'NO', 'Intelligent Gas Lift': 'NO', 'Availability': 'Exist'}
+2026-05-18 10:22:39 - INFO - Filtered to 5 rows to update
+2026-05-18 10:22:39 - INFO - Database connection established
+2026-05-18 10:22:39 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 10:22:39 - INFO - Test completed
+2026-05-18 10:26:40 - INFO - Starting update_well_data test
+2026-05-18 10:26:41 - INFO - Loaded 995 rows from Excel
+2026-05-18 10:26:41 - INFO - Columns: ['NOOP Document Date', 'FWR Document Date', 'PAC Name', 'Region Name', 'Field Name', 'Well Name', 'Well Type', 'Rig Name', 'Rig Type', 'Water Depth (m)', 'Total Well Depth MD Plan (m)', 'Total Well Depth TVD Plan (m)', 'AFE Cost Dry (usd)', 'AFE Cost Success (usd)', 'AFE Days Dry', 'AFE Days Success', 'AFE Cost (usd)', 'AFE Days', 'Special Status', 'Alternative Well Name', 'Tree Type', 'Spud Date', 'Well Start Date Time', 'Well End Date Time', 'Meterage Drilled (m)', 'Water Depth Category', 'Total Well Depth MD Actual (m)', 'Total Well Depth TVD Actual (m)', 'Final Cost Dry (usd)', 'Final Cost Success (usd)', 'Final Days Dry', 'Final Days Success', 'Final Cost (usd)', 'Final Days', 'Well NPT Percentage WOW (%)', 'Well NPT Percentage (%)', 'Drilling Min Standard', 'DMS', 'Plan DDPTF (days/1000ft)', 'Plan DDPTF', 'Plan DCPF (usd/ft)', 'Plan DCPF', 'Plan WCPF (usd/ft)', 'Plan WCPF', 'Actual DDPTF (days/1000ft)', 'Actual DDPTF', 'Actual DCPF (usd/ft)', 'Actual DCPF', 'Actual WCPF (usd/ft)', 'Actual WCPF', 'Completion Days Plan', 'Completion Cost Plan', 'Completion Min Standard', 'Plan CDPTF (days/1000ft)', 'Plan CCPF (usd/ft)', 'Completion Days Actual', 'Completion Cost Actual', 'Actual CDPTF (days/1000ft)', 'Actual CCPF (usd/ft)', 'Producing Formation', 'Pressure Temperature', 'Completion Type', 'Smart Well', 'ESP', 'Tubing Size (inch)', 'Zones', 'Number Of String', 'Tubing Material', 'Sand Control Length (ft)', 'PDG', 'OH Inflow Control', 'Completion Material', 'Completion Fluid Weight (ppg)', 'Completion Fluid Type', 'Chemical Injection Valve', 'Intelligent Gas Lift', 'Availability']
+2026-05-18 10:26:41 - INFO - First row: {'NOOP Document Date': Timestamp('2023-03-07 00:00:00'), 'FWR Document Date': Timestamp('2023-11-02 00:00:00'), 'PAC Name': 'VESTIGO', 'Region Name': 'PM', 'Field Name': 'LARUT', 'Well Name': 'LARUT A-26ST2', 'Well Type': 'APPRAISAL CUM DEV/DEVELOPMENT', 'Rig Name': 'SAPURA BERANI', 'Rig Type': 'TENDER ASSISTED DRILLING RIG (TADR)', 'Water Depth (m)': 60.0, 'Total Well Depth MD Plan (m)': 4127.49, 'Total Well Depth TVD Plan (m)': 2338.05, 'AFE Cost Dry (usd)': nan, 'AFE Cost Success (usd)': nan, 'AFE Days Dry': nan, 'AFE Days Success': nan, 'AFE Cost (usd)': 6560000.0, 'AFE Days': 14.29, 'Special Status': 'NO', 'Alternative Well Name': nan, 'Tree Type': 'DRY TREE', 'Spud Date': Timestamp('2023-08-25 00:00:00'), 'Well Start Date Time': Timestamp('2023-08-24 19:00:00'), 'Well End Date Time': Timestamp('2023-09-07 05:00:00'), 'Meterage Drilled (m)': 4026.63, 'Water Depth Category': 'SHALLOW WATER', 'Total Well Depth MD Actual (m)': 4121.5, 'Total Well Depth TVD Actual (m)': 2333.55, 'Final Cost Dry (usd)': nan, 'Final Cost Success (usd)': nan, 'Final Days Dry': nan, 'Final Days Success': nan, 'Final Cost (usd)': 4668369.0, 'Final Days': 13.42, 'Well NPT Percentage WOW (%)': 8.01, 'Well NPT Percentage (%)': 8.01, 'Drilling Min Standard': 'SW DEV ST 2HS MONOBORE', 'DMS': 'SW DEV ST 2HS', 'Plan DDPTF (days/1000ft)': 'Yes', 'Plan DDPTF': 2.4, 'Plan DCPF (usd/ft)': 'Yes', 'Plan DCPF': 795.0, 'Plan WCPF (usd/ft)': 'Yes', 'Plan WCPF': 1200.0, 'Actual DDPTF (days/1000ft)': 'yes', 'Actual DDPTF': 1.3, 'Actual DCPF (usd/ft)': 'yes', 'Actual DCPF': 325.0, 'Actual WCPF (usd/ft)': 'yes', 'Actual WCPF': 454.0, 'Completion Days Plan': nan, 'Completion Cost Plan': nan, 'Completion Min Standard': nan, 'Plan CDPTF (days/1000ft)': nan, 'Plan CCPF (usd/ft)': nan, 'Completion Days Actual': 1.81, 'Completion Cost Actual': 1318987.36, 'Actual CDPTF (days/1000ft)': nan, 'Actual CCPF (usd/ft)': nan, 'Producing Formation': 'SANDSTONE', 'Pressure Temperature': 'NORMAL', 'Completion Type': 'CASED HOLE CEMENTED MONOBORE', 'Smart Well': 'NO', 'ESP': 'NO', 'Tubing Size (inch)': '3-1/2"', 'Zones': 1.0, 'Number Of String': 'SINGLE', 'Tubing Material': 'L80 13CR', 'Sand Control Length (ft)': 65.62, 'PDG': False, 'OH Inflow Control': nan, 'Completion Material': 'L80 13CR', 'Completion Fluid Weight (ppg)': 6.8, 'Completion Fluid Type': 'BASE OIL/DIESEL', 'Chemical Injection Valve': 'NO', 'Intelligent Gas Lift': 'NO', 'Availability': 'Exist'}
+2026-05-18 10:26:41 - INFO - Filtered to 5 rows to update
+2026-05-18 10:26:41 - INFO - Database connection established
+2026-05-18 10:26:41 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 10:26:41 - INFO - Test completed
+2026-05-18 10:29:21 - INFO - Starting update_well_data test
+2026-05-18 10:29:22 - INFO - Loaded 995 rows from Excel
+2026-05-18 10:29:22 - INFO - No duplicate columns
+2026-05-18 10:29:22 - INFO - Total columns: 77
+2026-05-18 10:29:22 - INFO - Unique columns: 77
+2026-05-18 10:29:22 - INFO - Filtered to 5 rows to update
+2026-05-18 10:29:22 - INFO - Database connection established
+2026-05-18 10:29:22 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 10:29:22 - INFO - Test completed
+2026-05-18 10:30:13 - INFO - Starting update_well_data test
+2026-05-18 10:30:14 - INFO - Loaded 995 rows from Excel
+2026-05-18 10:30:14 - INFO - No duplicate columns
+2026-05-18 10:30:14 - INFO - Total columns: 77
+2026-05-18 10:30:14 - INFO - Unique columns: 77
+2026-05-18 10:30:14 - INFO - Filtered to 5 rows to update
+2026-05-18 10:30:14 - WARNING - Duplicate columns in filtered df: ['Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:30:14 - INFO - Filtered df columns: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:30:14 - INFO - Database connection established
+2026-05-18 10:30:14 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 10:30:14 - INFO - Test completed
+2026-05-18 10:31:48 - INFO - Starting update_well_data test
+2026-05-18 10:31:49 - INFO - Loaded 995 rows from Excel
+2026-05-18 10:31:49 - INFO - No duplicate columns
+2026-05-18 10:31:49 - INFO - Total columns: 77
+2026-05-18 10:31:49 - INFO - Unique columns: 77
+2026-05-18 10:31:49 - INFO - Filtered to 5 rows to update
+2026-05-18 10:31:49 - WARNING - Duplicate columns in filtered df: ['Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:31:49 - INFO - Filtered df columns: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:31:49 - INFO - Database connection established
+2026-05-18 10:31:49 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 10:31:49 - INFO - Test completed
+2026-05-18 10:33:20 - INFO - Starting update_well_data test
+2026-05-18 10:33:21 - INFO - Loaded 995 rows from Excel
+2026-05-18 10:33:21 - INFO - No duplicate columns
+2026-05-18 10:33:21 - INFO - Total columns: 77
+2026-05-18 10:33:21 - INFO - Unique columns: 77
+2026-05-18 10:33:21 - INFO - Filtered to 5 rows to update
+2026-05-18 10:33:21 - WARNING - Duplicate columns in filtered df: ['Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:33:21 - INFO - Filtered df columns: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:33:22 - INFO - Database connection established
+2026-05-18 10:33:22 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+Well Name
+  Field required [type=missing, input_value={'DMS': 'SW DEV ST 2HS', ...0, 'Actual WCPF': 454.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-05-18 10:33:22 - INFO - Test completed
+2026-05-18 10:35:29 - INFO - Testing duplicate columns issue
+2026-05-18 10:35:30 - INFO - Original df - Total: 77, Unique: 77
+2026-05-18 10:35:30 - INFO - After head(5) - Total: 77, Unique: 77
+2026-05-18 10:35:30 - INFO - to_dict successful, got 5 records
+2026-05-18 10:37:23 - INFO - Testing get_rows_to_update
+2026-05-18 10:37:24 - INFO - Filtered df - Total: 10, Unique: 7
+2026-05-18 10:37:24 - INFO - Filtered df columns: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:37:24 - WARNING - Duplicates in filtered: ['Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:37:24 - INFO - to_dict successful, got 5 records
+2026-05-18 10:37:24 - INFO - First record keys: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:38:30 - INFO - Testing get_rows_to_update
+2026-05-18 10:38:31 - INFO - Filtered df - Total: 10, Unique: 7
+2026-05-18 10:38:31 - INFO - Filtered df columns: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:38:31 - WARNING - Duplicates in filtered: ['Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:38:31 - INFO - to_dict successful, got 5 records
+2026-05-18 10:38:31 - INFO - First record keys: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:39:17 - INFO - Testing get_rows_to_update
+2026-05-18 10:39:18 - INFO - Filtered df - Total: 10, Unique: 7
+2026-05-18 10:39:18 - INFO - Filtered df columns: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:39:18 - WARNING - Duplicates in filtered: ['Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:39:18 - INFO - to_dict successful, got 5 records
+2026-05-18 10:39:18 - INFO - First record keys: ['DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-18 10:51:57 - INFO - Testing get_rows_to_update
+2026-05-18 10:52:32 - INFO - Testing get_rows_to_update
+2026-05-18 10:54:22 - INFO - Testing get_rows_to_update
+2026-05-18 10:54:52 - INFO - Testing get_rows_to_update
+2026-05-18 10:57:03 - INFO - Testing get_rows_to_update
+2026-05-18 11:10:01 - INFO - Testing get_rows_to_update
+2026-05-18 13:49:26 - INFO - Testing get_rows_to_update
+2026-05-18 13:51:34 - INFO - Testing get_rows_to_update
+2026-05-18 13:52:12 - INFO - Testing get_rows_to_update
+2026-05-19 09:25:46 - INFO - Testing get_rows_to_update
+2026-05-19 09:26:04 - INFO - Testing get_rows_to_update
+2026-05-19 09:26:04 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 09:26:04 - INFO - Filtered df columns: ['Well Name', 'Well Type', 'DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-19 09:26:04 - INFO - Setting up db session
+2026-05-19 09:26:04 - INFO - Database connection established
+2026-05-19 09:26:04 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+DMS
+  Input should be a valid string [type=string_type, input_value=1, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-05-19 09:30:21 - INFO - Testing get_rows_to_update
+2026-05-19 09:30:21 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 09:30:21 - INFO - Filtered df columns: ['Well Name', 'Well Type', 'DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-19 09:30:21 - INFO - Setting up db session
+2026-05-19 09:30:21 - INFO - Database connection established
+2026-05-19 09:30:21 - ERROR - Validation Error: 1 validation error for WellDrillingSchema
+DMS
+  Input should be a valid string [type=string_type, input_value=1, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-05-19 09:30:42 - INFO - Testing get_rows_to_update
+2026-05-19 09:30:42 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 09:30:42 - INFO - Filtered df columns: ['Well Name', 'Well Type', 'DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-19 09:30:42 - INFO - Setting up db session
+2026-05-19 09:30:42 - INFO - Database connection established
+2026-05-19 09:30:42 - INFO - Validated 1 records
+2026-05-19 09:30:42 - INFO - Fetching 1 wells from database
+2026-05-19 09:30:44 - WARNING - 1 well(s) not found as 'APPRAISAL CUM DEV/DEVELOPMENT' and not active. Investigating...
+2026-05-19 09:30:52 - WARNING - Wells found with other attributes (Expected Type 'APPRAISAL CUM DEV/DEVELOPMENT', isDeleted=False): ["TEST NOOP AZ (Type: 'EXPLORATION/APPRAISAL', Deleted: False)"]
+2026-05-19 09:30:52 - ERROR - Cannot proceed: missing wells in database
+2026-05-19 09:37:06 - INFO - Testing get_rows_to_update
+2026-05-19 09:37:06 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 09:37:06 - INFO - Filtered df columns: ['Well Name', 'Well Type', 'DMS', 'Plan DDPTF', 'Plan DCPF', 'Plan WCPF', 'Actual DDPTF', 'Actual DCPF', 'Actual WCPF']
+2026-05-19 09:37:06 - INFO - Setting up db session
+2026-05-19 09:37:06 - INFO - Database connection established
+2026-05-19 09:37:06 - INFO - Validated 1 records
+2026-05-19 09:37:06 - INFO - Fetching 1 wells from database
+2026-05-19 09:37:07 - INFO - Successfully validated all 1 wells
+2026-05-19 09:37:07 - INFO - Changes staged for review
+2026-05-19 09:37:07 - DEBUG - WellID: 61f81fd1-02eb-499e-9b0f-4fc0646029cb, DrillingMinStandard: 1
+2026-05-19 09:42:03 - INFO - Update cancelled. Database remains unchanged.
+2026-05-19 13:47:52 - INFO - Starting Well Data Update Pipeline
+2026-05-19 13:47:59 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 13:47:59 - INFO - Database connection established
+2026-05-19 13:47:59 - INFO - Validated 28 records
+2026-05-19 13:47:59 - INFO - Fetching 28 wells from database
+2026-05-19 13:48:00 - ERROR - DB Integrity Error: Multiple 'APPRAISAL CUM DEV/DEVELOPMENT' records found for: ['BESA-02', 'SAPA-12', 'CHRA-03 ST1', 'AJK-A2ST1', 'SAPA-14', 'BPA-4', 'SAPA-24', 'SUJT-C05', 'SM-102', 'BAYAN-223']
+2026-05-19 13:48:00 - ERROR - Cannot proceed: missing wells in database
+2026-05-19 14:09:51 - INFO - Starting Well Data Update Pipeline
+2026-05-19 14:09:55 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 14:09:56 - INFO - Database connection established
+2026-05-19 14:09:56 - INFO - Validated 28 records
+2026-05-19 14:09:56 - INFO - Fetching 28 wells from database
+2026-05-19 14:09:57 - ERROR - DB Integrity Error: Multiple 'APPRAISAL CUM DEV/DEVELOPMENT' records found for: ['SM-102', 'BAYAN-223', 'SAPA-12', 'SAPA-24', 'SUJT-C05', 'CHRA-03 ST1', 'AJK-A2ST1', 'BPA-4', 'SAPA-14']
+2026-05-19 14:09:57 - ERROR - Cannot proceed: missing wells in database
+2026-05-19 14:14:24 - INFO - Starting Well Data Update Pipeline
+2026-05-19 14:14:24 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 14:14:24 - INFO - Database connection established
+2026-05-19 14:14:24 - INFO - Validated 1 records
+2026-05-19 14:14:24 - INFO - Fetching 1 wells from database
+2026-05-19 14:14:28 - INFO - Successfully validated all 1 wells
+2026-05-19 14:14:29 - INFO - Changes staged for review
+2026-05-19 14:14:30 - INFO - Reviewing 1 staged updates:
+2026-05-19 14:14:30 - INFO -   -> WellID: 61f81fd1-02eb-499e-9b0f-4fc0646029cb | New DMS: 1
+2026-05-19 14:14:30 - INFO - Detailed preview exported to data/update_preview.xlsx
+2026-05-19 14:18:31 - INFO - Changes saved successfully to database
+2026-05-19 15:05:01 - INFO - Starting Well Data Update Pipeline
+2026-05-19 15:05:02 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 15:05:02 - INFO - Database connection established
+2026-05-19 15:05:02 - INFO - Validated 1 records
+2026-05-19 15:05:02 - INFO - Fetching 1 wells from database
+2026-05-19 15:05:03 - INFO - Successfully validated all 1 wells
+2026-05-19 15:05:03 - INFO - Changes staged for review
+2026-05-19 15:05:03 - INFO - Reviewing 1 staged updates:
+2026-05-19 15:05:03 - INFO -   -> WellName: AAZ 01 | New DMS: 1
+2026-05-19 15:05:03 - INFO - Detailed preview exported to data/update_preview.xlsx
+2026-05-19 15:05:08 - INFO - Changes saved successfully to database
+2026-05-19 15:06:13 - INFO - Starting Well Data Update Pipeline
+2026-05-19 15:06:14 - INFO - Filtered df - Total: 9, Unique: 9
+2026-05-19 15:06:14 - INFO - Database connection established
+2026-05-19 15:06:14 - INFO - Validated 1 records
+2026-05-19 15:06:14 - INFO - Fetching 1 wells from database
+2026-05-19 15:06:15 - INFO - Successfully validated all 1 wells
+2026-05-19 15:06:15 - INFO - Changes staged for review
+2026-05-19 15:06:15 - INFO - Reviewing 1 staged updates:
+2026-05-19 15:06:15 - INFO -   -> WellName: AAZ 01 | New DMS: 8
+2026-05-19 15:06:15 - INFO - Detailed preview exported to data/update_preview.xlsx
+2026-05-19 15:06:17 - INFO - Changes saved successfully to database
