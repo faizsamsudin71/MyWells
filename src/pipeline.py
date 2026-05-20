@@ -83,7 +83,14 @@ def fetch_wells_from_db(session: Session, well_names: List[str]) -> Optional[Dic
 
 def validate_dataframe(df: pd.DataFrame) -> List[WellDrillingSchema]:
     try:
-        validated_data = [WellDrillingSchema(**row) for row in df.to_dict('records') if row['DMS'] != 'No']
+        df_clean = df.where(pd.notna(df), None)
+        validated_data = []
+        for row in df_clean.to_dict('records'):
+            if row['DMS'] != 'No':
+                if row.get('DMS') is None:
+                    row['DMS'] = '' # Fallback for missing DMS to prevent Pydantic string validation errors
+                validated_data.append(WellDrillingSchema(**row))
+                
         logger.info(f"Validated {len(validated_data)} records")
         return validated_data
     except Exception as e:
