@@ -37,13 +37,13 @@ def check_duplicates(df: pd.DataFrame, column: str = 'Well Name') -> bool:
 
 def fetch_wells_from_db(session: Session, well_names: List[str]) -> Optional[Dict[str, Well]]:
     logger.info(f"Fetching {len(well_names)} wells from database")
-    target_type = 'APPRAISAL CUM DEV/DEVELOPMENT'
+    target_types = ['APPRAISAL CUM DEV/DEVELOPMENT', 'EXPLORATION/APPRAISAL']
 
     matched_wells = session.query(Well).join(
         WellGeneralDetails, Well.Id == WellGeneralDetails.WellId
     ).filter(
         Well.WellName.in_(well_names),
-        Well.WellType == target_type,
+        Well.WellType.in_(target_types),
         WellGeneralDetails.isDeleted == False
     ).all()
 
@@ -52,11 +52,11 @@ def fetch_wells_from_db(session: Session, well_names: List[str]) -> Optional[Dic
 
     db_duplicates = [name for name, count in Counter(w.WellName for w in matched_wells).items() if count > 1]
     if db_duplicates:
-        logger.error(f"DB Integrity Error: Multiple '{target_type}' records found for: {db_duplicates}")
+        logger.error(f"DB Integrity Error: Multiple '{target_types}' records found for: {db_duplicates}")
         return None
 
     if missing_names:
-        logger.warning(f"{len(missing_names)} well(s) not found as '{target_type}' and not active. Investigating...")
+        logger.warning(f"{len(missing_names)} well(s) not found as '{target_types}' and not active. Investigating...")
         diagnostic_wells = session.query(Well).filter(Well.WellName.in_(missing_names)).all()
         
         found_with_other_attributes = {}
