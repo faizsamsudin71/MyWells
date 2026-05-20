@@ -6,16 +6,27 @@ from src.logger import setup_logger
 
 logger = setup_logger(__name__)
 
-def get_db_session() -> Session:
-    password = quote_plus(DB_PASSWORD)
+from sqlalchemy import URL
 
-    connection_string = (
-        f"mssql+pyodbc://{DB_USERNAME}:{password}@{DB_SERVER}:{DB_PORT}/{DB_NAME}"
-        f"?driver={DB_DRIVER}"
+def get_db_session() -> Session:
+    if DB_PASSWORD is None or DB_DRIVER is None:
+        raise ValueError("Database credentials missing. Please check your .env file.")
+
+    # Fix driver name formatting (replace + with space if present)
+    driver_name = DB_DRIVER.replace("+", " ")
+
+    connection_url = URL.create(
+        "mssql+pyodbc",
+        username=DB_USERNAME,
+        password=DB_PASSWORD,
+        host=DB_SERVER,
+        port=int(DB_PORT) if DB_PORT else 1433,
+        database=DB_NAME,
+        query={"driver": driver_name}
     )
 
     try:
-        engine = create_engine(connection_string)
+        engine = create_engine(connection_url)
         SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
         session = SessionLocal()
         logger.info("Database connection established")
