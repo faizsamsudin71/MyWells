@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 # pyrefly: ignore [missing-import]
 from src.logger import setup_logger
 # pyrefly: ignore [missing-import]
-from src.config import LIST_KEYCOLS, LIST_COLS
+from src.config import LIST_KEYCOLS, LIST_COLS, TARGET_WELL_NAMES
 # pyrefly: ignore [missing-import]
 from src.models import Well, WellPhaseDrilling, WellGeneralDetails
 # pyrefly: ignore [missing-import]
@@ -36,19 +36,22 @@ def check_duplicates(df: pd.DataFrame, column: str = 'Well Name') -> bool:
     return False
 
 def fetch_wells_from_db(session: Session, well_names: List[str]) -> Optional[Dict[str, Well]]:
-    logger.info(f"Fetching {len(well_names)} wells from database")
+    # Filter the input well names to only include the 16 specific target wells
+    filtered_well_names = [name for name in well_names if name in TARGET_WELL_NAMES]
+    
+    logger.info(f"Fetching {len(filtered_well_names)} target wells from database (out of {len(well_names)} in source)")
     target_types = ['APPRAISAL CUM DEV/DEVELOPMENT', 'EXPLORATION/APPRAISAL']
 
     matched_wells = session.query(Well).join(
         WellGeneralDetails, Well.Id == WellGeneralDetails.WellId
     ).filter(
-        Well.WellName.in_(well_names),
+        Well.WellName.in_(filtered_well_names),
         Well.WellType.in_(target_types),
         WellGeneralDetails.isDeleted == False
-    ).all()
+    ).distinct().all()
 
     found_names = {w.WellName for w in matched_wells}
-    missing_names = list(set(well_names) - found_names)
+    missing_names = list(set(filtered_well_names) - found_names)
 
     db_duplicates = [name for name, count in Counter(w.WellName for w in matched_wells).items() if count > 1]
     if db_duplicates:
@@ -83,13 +86,19 @@ def fetch_wells_from_db(session: Session, well_names: List[str]) -> Optional[Dic
 
 def validate_dataframe(df: pd.DataFrame) -> List[WellDrillingSchema]:
     try:
-        df_clean = df.where(pd.notna(df), None)
         validated_data = []
-        for row in df_clean.to_dict('records'):
-            if row['DMS'] != 'No':
-                if row.get('DMS') is None:
-                    row['DMS'] = '' # Fallback for missing DMS to prevent Pydantic string validation errors
-                validated_data.append(WellDrillingSchema(**row))
+        for row in df.to_dict('records'):
+            clean_row = {}
+            for k, v in row.items():
+                if pd.isna(v):
+                    clean_row[k] = None
+                else:
+                    clean_row[k] = v
+
+            if clean_row.get('DMS') != 'No':
+                if clean_row.get('DMS') is None:
+                    clean_row['DMS'] = '' # Fallback for missing DMS to prevent Pydantic string validation errors
+                validated_data.append(WellDrillingSchema(**clean_row))
                 
         logger.info(f"Validated {len(validated_data)} records")
         return validated_data
